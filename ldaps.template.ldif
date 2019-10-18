@@ -1,0 +1,14 @@
+# Mount the "/etc/ssl/certs/" volume in your docker-compose/docker run
+dn: cn=config
+changetype: modify
+replace: olcTLSCACertificateFile
+olcTLSCACertificateFile: /etc/ssl/certs/CACertificateFile.crt
+-
+replace: olcTLSCertificateKeyFile
+olcTLSCertificateKeyFile: /etc/ssl/certs/private/CertificateKeyFile.key
+-
+replace: olcTLSCertificateFile
+olcTLSCertificateFile: /etc/ssl/certs/CertificateFile.crt
+-
+replace: olcTLSVerifyClient
+olcTLSVerifyClient: never
