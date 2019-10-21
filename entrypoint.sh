@@ -112,4 +112,6 @@ fi
 
 chown -R openldap:openldap /etc/ldap/slapd.d/ /var/lib/ldap/ /var/run/slapd/
 
+sh /after_work.sh&
+
 exec "$@"
